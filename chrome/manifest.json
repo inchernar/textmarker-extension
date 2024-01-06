@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Text Marker",
+  "version": "0.1.0",
+  "description": "Browser extension enables mark text snippets in articles and etc.",
+  "icons": {
+    "16": "icon64.png",
+    "24": "icon64.png",
+    "32": "icon64.png",
+    "48": "icon64.png",
+    "64": "icon64.png",
+    "128": "icon64.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Text Marker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content-style.css"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,16 @@
+:root {
+    --x-marker-fg: rgb(51, 51, 51);
+    --x-marker-bg: rgb(146, 255, 170);
+}
+
+x-marker {
+    border-radius: 4px;
+    color: var(--x-marker-fg) !important;
+    background-color: var(--x-marker-bg) !important;
+}
+
+@media print {
+    x-marker {
+        -webkit-print-color-adjust: exact !important;
+    }
+}
